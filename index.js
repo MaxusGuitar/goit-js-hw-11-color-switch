@@ -19,14 +19,12 @@ const refs = {
     document.body.style.backgroundColor = color
   }
 
-let timerId = 0
+let timerId = undefined
 
 refs.startBtn.addEventListener('click', () => {
-  disActiveBtn(),
   timerId = timerId ?
     timerId :
     setInterval(() => setRandomColor(), 1000)
-  
 })
 
 refs.stopBtn.addEventListener("click", () => {
